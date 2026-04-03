@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* SK Residence — warm orange/saffron on white */
+    --background: 0.98 0.005 80;
+    --foreground: 0.18 0.02 50;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.02 50;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 50;
+
+    /* Primary: warm orange/saffron */
+    --primary: 0.65 0.2 42;
+    --primary-foreground: 1 0 0;
+
+    /* Secondary: light warm gray */
+    --secondary: 0.95 0.01 80;
+    --secondary-foreground: 0.25 0.02 50;
+
+    --muted: 0.95 0.01 80;
+    --muted-foreground: 0.52 0.02 60;
+
+    /* Accent: soft amber */
+    --accent: 0.93 0.04 70;
+    --accent-foreground: 0.3 0.04 50;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.88 0.02 75;
+    --input: 0.92 0.02 75;
+    --ring: 0.65 0.2 42;
+
+    --chart-1: 0.65 0.2 42;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    /* Sidebar: warm white with dark text for clear readability */
+    --sidebar: 0.97 0.01 80;
+    --sidebar-foreground: 0.18 0.02 50;
+    --sidebar-primary: 0.65 0.2 42;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.91 0.04 65;
+    --sidebar-accent-foreground: 0.18 0.02 50;
+    --sidebar-border: 0.88 0.02 75;
+    --sidebar-ring: 0.65 0.2 42;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+/* Leaflet map fix */
+.leaflet-container {
+  z-index: 1;
+}
